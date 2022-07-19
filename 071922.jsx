@@ -11,18 +11,18 @@ How to use the script: https://youtu.be/6ICVsi2pWyk
 Configure following paramers before running the script
 --------------------------------------------------------------------------------------*/
 //Place all images needs to be processed in a folder. Add the path below.
-var sourceFolder = Folder("C:\\ps\\src");
+var sourceFolder = Folder(""C:\Users\howdy\Documents\ConwayElectric\Marketing_Advertising\Images\MichaelAllen_030422\album-d289559983-downloads"");
 //Add the path of an existing folder below to save the output.
-var saveFolder = new Folder("C:\\ps\\out");
+var saveFolder = new Folder(""C:\Users\howdy\Documents\ConwayElectric\Marketing_Advertising\Images\MichaelAllen_030422\071922ps_out"");
 //Fill color of the background
 var colorRef = new SolidColor;
 colorRef.rgb.red = 255;
 colorRef.rgb.green = 255;
 colorRef.rgb.blue = 255;
 //Set blow to true to make the background transparent.
-var isTransparent = true;
+var isTransparent = false;
 //Set below to true to use an image as background
-var isImageBg = true;
+var isImageBg = false;
 //If isImageBg is set to true,
 //it's required to the background image to be preopened in photohsop
 //Backdound image must be the active document
