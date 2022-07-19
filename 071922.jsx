@@ -11,9 +11,9 @@ How to use the script: https://youtu.be/6ICVsi2pWyk
 Configure following paramers before running the script
 --------------------------------------------------------------------------------------*/
 //Place all images needs to be processed in a folder. Add the path below.
-var sourceFolder = Folder(""C:\Users\howdy\Documents\ConwayElectric\Marketing_Advertising\Images\MichaelAllen_030422\album-d289559983-downloads"");
+var sourceFolder = Folder("C:\Users\howdy\Documents\ConwayElectric\Marketing_Advertising\Images\MichaelAllen_030422\album-d289559983-downloads");
 //Add the path of an existing folder below to save the output.
-var saveFolder = new Folder(""C:\Users\howdy\Documents\ConwayElectric\Marketing_Advertising\Images\MichaelAllen_030422\071922ps_out"");
+var saveFolder = new Folder("C:\Users\howdy\Documents\ConwayElectric\Marketing_Advertising\Images\MichaelAllen_030422\071922ps_out");
 //Fill color of the background
 var colorRef = new SolidColor;
 colorRef.rgb.red = 255;
@@ -27,14 +27,6 @@ var isImageBg = false;
 //it's required to the background image to be preopened in photohsop
 //Backdound image must be the active document
 //-----------------------------------------------------------------------------------
-
-
-//Check if it's selected to use an image as background
-	if(isImageBg){
-		//Store background image and a variable
-		var doc_bg = app.activeDocument;
-	}
-
 
 //Cheks if the source folder is null
   if (sourceFolder != null)
@@ -78,19 +70,6 @@ for(var a = 0 ;a < fileList.length; a++){
 	}
 	else{
 		app.activeDocument.selection.fill(colorRef);
-	}
-	
-	
-	//Check if it's selected to use an image as background
-	if(isImageBg){
-		//Store main document to a variable
-		var main_doc = app.activeDocument;
-		//Swich to background image
-		app.activeDocument = doc_bg;
-		//Copy background to the main image
-		app.activeDocument.activeLayer.duplicate(main_doc, ElementPlacement.PLACEATEND);
-		//Switch to the main image
-		app.activeDocument = main_doc;
 	}
 	
 
